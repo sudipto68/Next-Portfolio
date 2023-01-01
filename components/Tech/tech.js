@@ -11,6 +11,53 @@ import jqurey from "../../public/jqurey.png";
 import next from "../../public/next.svg";
 
 const Tech = () => {
+  const allTech = [
+    {
+      img: html,
+      id: 1,
+      alt: "html",
+    },
+    {
+      img: css,
+      id: 2,
+      alt: "css",
+    },
+    {
+      img: sass,
+      id: 3,
+      alt: "sass",
+    },
+    {
+      img: bootstrap,
+      id: 4,
+      alt: "bootstrap",
+    },
+    {
+      img: js,
+      id: 5,
+      alt: "js",
+    },
+    {
+      img: jqurey,
+      id: 6,
+      alt: "jqurey",
+    },
+    {
+      img: react,
+      id: 7,
+      alt: "react",
+    },
+    {
+      img: next,
+      id: 8,
+      alt: "next",
+    },
+    {
+      img: drupal,
+      id: 9,
+      alt: "drupal",
+    },
+  ];
   return (
     <>
       <section className="text-center my-8 md:my-20">
@@ -18,70 +65,16 @@ const Tech = () => {
           Technology I am Using Everyday
         </h2>
         <div className="flex flex-wrap justify-center gap-10 pt-8">
-          <Image
-            src={html}
-            height={50}
-            width={50}
-            alt="html"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={css}
-            height={50}
-            width={50}
-            alt="css"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={sass}
-            height={50}
-            width={50}
-            alt="sass"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={bootstrap}
-            height={50}
-            width={50}
-            alt="bootstrap"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={js}
-            height={50}
-            width={50}
-            alt="js"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={jqurey}
-            height={50}
-            width={50}
-            alt="jQuery"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={react}
-            height={50}
-            width={50}
-            alt="react"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={next}
-            height={50}
-            width={50}
-            alt="Next JS"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
-          <Image
-            src={drupal}
-            height={50}
-            width={50}
-            alt="drupal"
-            title="Drupal"
-            className="grayscale hover:grayscale-0 transition-all delay-100"
-          />
+          {allTech.map((item, index) => (
+            <Image
+              key={item.id}
+              src={item.img}
+              height={50}
+              width={50}
+              alt={item.alt}
+              className="grayscale hover:grayscale-0 transition-all delay-100"
+            />
+          ))}
         </div>
       </section>
     </>
