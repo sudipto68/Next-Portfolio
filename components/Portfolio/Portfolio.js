@@ -44,39 +44,38 @@ const Portfolio = () => {
         </h2>
         <div className="my-8 md:my-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {portfolioList.map((item, index) => (
-            <div className="mt-8 md:mt-0" key={item.id}>
-              <Image
-                src={item.image}
-                alt={item.alt}
-                height={400}
-                width={400}
-                className="hover:scale-105 transition duration-300 ease-in-out"
-              />
-              <h3 className=" text-md md:text-lg py-3">
-                {" "}
-                Project Name: {item.title}
-              </h3>
-              <p className="text-gray-800">
-                Used Technology : <br />
-                {item.description}
-              </p>
-              <div className="my-3 flex gap-3">
-                <a
-                  href={item?.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-bold bg-cyan-500 px-4 py-2 rounded-md"
-                >
-                  Live Link
-                </a>
-                <a
-                  href={item?.github || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-bold bg-cyan-500 px-4 py-2 rounded-md"
-                >
-                  Github Link
-                </a>
+            <div className="flex justify-center mt-8 md:mt-0" key={item.id}>
+              <div className="rounded-lg shadow-lg bg-white max-w-sm">
+                <Image
+                  className="rounded-t-lg"
+                  src={item.image}
+                  alt={item.alt}
+                  width={400}
+                  height={400}
+                />
+                <div className="p-6">
+                  <h5 className="text-gray-900 text-xl font-medium mb-2">
+                    {item.name}
+                  </h5>
+                  <p className="text-gray-700 text-base mb-4">
+                    Used Technology: <br />
+                    {item.description}
+                  </p>
+                  <div className="flex gap-5">
+                    <a
+                      href={item.live}
+                      className=" inline-block px-6 py-2.5 bg-cyan-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Live Link
+                    </a>
+                    <a
+                      href={item.github || "#"}
+                      className=" inline-block px-6 py-2.5 bg-cyan-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Github Link
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
