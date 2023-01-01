@@ -3,6 +3,7 @@ import Nav from "./../components/Nav/nav.js";
 import Intro from "../components/Intro/intro.js";
 import Tech from "../components/Tech/tech.js";
 import Service from "../components/Services/service.js";
+import Portfolio from "../components/Portfolio/Portfolio.js";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Intro />
         <Tech />
         <Service />
+        <Portfolio />
       </main>
     </>
   );

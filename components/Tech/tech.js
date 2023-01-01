@@ -8,6 +8,7 @@ import drupal from "../../public/drupal.png";
 import js from "../../public/js.png";
 import bootstrap from "../../public/bootstrap.png";
 import jqurey from "../../public/jqurey.png";
+import next from "../../public/next.svg";
 
 const Tech = () => {
   return (
@@ -64,6 +65,13 @@ const Tech = () => {
             height={50}
             width={50}
             alt="react"
+            className="grayscale hover:grayscale-0 transition-all delay-100"
+          />
+          <Image
+            src={next}
+            height={50}
+            width={50}
+            alt="Next JS"
             className="grayscale hover:grayscale-0 transition-all delay-100"
           />
           <Image

@@ -8,10 +8,10 @@ const Service = () => {
   return (
     <section>
       <h2 className="text-xl md:text-2xl text-center font-bold tracking-wider">
-        Serevices I Offer
+        Services I Offer
       </h2>
-      <div className="md:flex gap-10 my-10">
-        <div className="text-center p-10 shadow-lg rounded-sm my-4">
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
+        <div className="text-center p-10 shadow-lg rounded-sm mb-4">
           <Image
             src={design}
             alt="design"
@@ -20,14 +20,14 @@ const Service = () => {
             className="mx-auto transition-all delay-100 hover:scale-110"
           />
           <h3 className="font-bold text-xl text-gray-800 py-4">
-            Resonsive Design
+            Responsive Design
           </h3>
           <p className="md:text-lg">
-            Creating fully responsive mobile friendly websites using mordern
-            tech stackes that looks great both on Web and mobile devices
+            Creating fully responsive Mobile friendly websites using modern Tech
+            stackes that looks great both on Web and Mobile devices.
           </p>
         </div>
-        <div className="text-center p-10 shadow-lg rounded-sm my-4">
+        <div className="text-center p-10 shadow-lg rounded-sm mb-4">
           <Image
             src={code}
             alt="design"
@@ -36,14 +36,14 @@ const Service = () => {
             className="mx-auto transition-all delay-100 hover:scale-110"
           />
           <h3 className="font-bold text-xl text-gray-800 py-4">
-            Resonsive Design
+            Modern Technologies
           </h3>
           <p className="md:text-lg">
-            Creating fully responsive mobile friendly websites that looks great
-            both on Web and mobile devices
+            Creating Web and Mobile Applications using Modern Technologies like
+            React JS, Next JS, React Native.
           </p>
         </div>
-        <div className="text-center p-10 shadow-lg rounded-sm my-4">
+        <div className="text-center p-10 shadow-lg rounded-sm mb-4">
           <Image
             src={consulting}
             alt="design"
@@ -52,11 +52,11 @@ const Service = () => {
             className="mx-auto transition-all delay-100 hover:scale-110"
           />
           <h3 className="font-bold text-xl text-gray-800 py-4">
-            Resonsive Design
+            Excellent Communication
           </h3>
           <p className="md:text-lg">
-            Creating fully responsive mobile friendly websites that looks great
-            both on Web and mobile devices
+            I always try to make good communication with my clients and provide
+            them what they need.
           </p>
         </div>
       </div>

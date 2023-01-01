@@ -15,9 +15,9 @@ const Intro = () => {
           Frontend Developer
         </h3>
         <p className=" text-md md:text-lg py-2 leading-6 text-gray-800 max-w-prose mx-auto text-justify">
-          Experienced Frontend web Developer who likes problem solving and am a
-          curious mind who loves learning. With hard work, dedication and
-          persistence I always try to find effective solutions to complex
+          I am an experienced Frontend web Developer who likes problem solving
+          and am a curious mind who loves learning. With hard work, dedication
+          and persistence I always try to find effective solutions to complex
           problems. My objective is to continually grow via a rewarding and
           challenging career in software development.
         </p>
