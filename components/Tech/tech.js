@@ -60,7 +60,7 @@ const Tech = () => {
   ];
   return (
     <>
-      <section className="text-center my-8 md:my-20">
+      <section className="text-center my-8 md:my-10">
         <h2 className="text-xl md:text-2xl font-bold tracking-wider">
           Technology I am Using Everyday
         </h2>

@@ -40,9 +40,9 @@ const Portfolio = () => {
     <>
       <section>
         <h2 className="text-xl md:text-2xl text-center font-bold tracking-wider">
-          Portfolio
+          Recent Projects
         </h2>
-        <div className="my-8 md:my-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="py-8 md:py-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {portfolioList.map((item, index) => (
             <div className="flex justify-center mt-8 md:mt-0" key={item.id}>
               <div className="rounded-lg shadow-lg bg-white max-w-sm">

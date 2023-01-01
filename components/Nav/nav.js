@@ -1,17 +1,27 @@
+import Link from "next/link";
 import React from "react";
 import { BsFillMoonFill } from "react-icons/bs";
 
-const Nav = () => {
+const Nav = ({ handleClick }) => {
   return (
     <>
       <section>
         <nav className=" py-10 mb-12 flex justify-between">
-          <h1 className="text-xl font-burtons uppercase tracking-widest">
+          <Link
+            href="/"
+            className="text-xl font-burtons uppercase tracking-widest"
+          >
             Sudipto
-          </h1>
+          </Link>
           <ul className="flex items-center">
             <li>
-              <BsFillMoonFill className=" cursor-pointer text-2xl" />
+              <BsFillMoonFill
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick();
+                }}
+                className=" cursor-pointer text-2xl"
+              />
             </li>
             <li>
               <a
