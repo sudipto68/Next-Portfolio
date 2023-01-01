@@ -16,6 +16,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "Lato", sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
