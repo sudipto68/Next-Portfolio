@@ -1,20 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import {
-  BsFillMoonFill,
-  BsGithub,
-  BsLinkedin,
-  BsFacebook,
-} from "react-icons/bs";
-import devImage from "../public/dev.png";
-import react from "../public/react.png";
-import html from "../public/html.png";
-import css from "../public/css.png";
-import sass from "../public/sass.png";
-import drupal from "../public/drupal.png";
-import js from "../public/js.png";
-import bootstrap from "../public/bootstrap.png";
-import jqurey from "../public/jqurey.png";
+import Nav from "./../components/Nav/nav.js";
+import Intro from "../components/Intro/intro.js";
+import Tech from "../components/Tech/tech.js";
+import Service from "../components/Services/service.js";
 
 export default function Home() {
   return (
@@ -28,111 +16,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=" bg-white px-10">
-        <section>
-          <nav className=" py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons uppercase tracking-widest">
-              Sudipto
-            </h1>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonFill className=" cursor-pointer text-2xl" />
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white bg-gradient-to-r from-cyan-500 to-teal-500 px-4 py-2 rounded-md ml-8"
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </section>
-        <section className="text-center">
-          <div className="relative text-center flex justify-center">
-            <Image src={devImage} alt="avatar" width="200" height="200" />
-          </div>
-          <h2 className="text-3xl text-teal-500 pt-4">Sudipto Kumar Mitra</h2>
-          <h3 className="text-md py-2 text-gray-800 font-bold tracking-wider">
-            Frontend Developer
-          </h3>
-          <p className=" text-md py-2 leading-6 text-gray-800 max-w-prose mx-auto text-justify">
-            Experienced Frontend web Developer who likes problem solving and am
-            a curious mind who loves learning. With hard work, dedication and
-            persistence I always try to find effective solutions to complex
-            problems. My objective is to continually grow via a rewarding and
-            challenging career in software development.
-          </p>
-          <div className="flex gap-10 justify-center py-4 text-2xl">
-            <BsGithub />
-            <BsLinkedin />
-            <BsFacebook />
-          </div>
-        </section>
-        <section className="text-center py-10">
-          <h2 className="text-xl font-bold tracking-wider">
-            Technology I am Using Everyday
-          </h2>
-          <div className="flex justify-center gap-10 pt-8">
-            <Image
-              src={html}
-              height={50}
-              width={50}
-              alt="html"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-            <Image
-              src={css}
-              height={50}
-              width={50}
-              alt="css"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-            <Image
-              src={sass}
-              height={50}
-              width={50}
-              alt="sass"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-            <Image
-              src={bootstrap}
-              height={50}
-              width={50}
-              alt="bootstrap"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-            <Image
-              src={js}
-              height={50}
-              width={50}
-              alt="js"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-            <Image
-              src={jqurey}
-              height={50}
-              width={50}
-              alt="jQuery"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-            <Image
-              src={react}
-              height={50}
-              width={50}
-              alt="react"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-            <Image
-              src={drupal}
-              height={50}
-              width={50}
-              alt="drupal"
-              title="drupal"
-              className="grayscale hover:grayscale-0 transition-all delay-100"
-            />
-          </div>
-        </section>
+        <Nav />
+        <Intro />
+        <Tech />
+        <Service />
       </main>
     </>
   );
