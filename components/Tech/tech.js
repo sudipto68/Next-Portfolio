@@ -61,7 +61,7 @@ const Tech = () => {
   return (
     <>
       <section className="text-center my-8 md:my-10">
-        <h2 className="text-xl md:text-2xl font-bold tracking-wider">
+        <h2 className="text-xl md:text-2xl font-bold tracking-wider dark:text-white">
           Technology I am Using Everyday
         </h2>
         <div className="flex flex-wrap justify-center gap-10 pt-8">

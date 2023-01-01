@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-white px-10 dark:bg-gray-900">
-        <Nav handleClick={handleClick} />
+        <Nav handleClick={handleClick} darkMode={darkMode} />
         <Intro />
         <Tech />
         <Service />

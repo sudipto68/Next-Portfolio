@@ -30,13 +30,13 @@ const Service = () => {
   ];
   return (
     <section>
-      <h2 className="text-xl md:text-2xl text-center font-bold tracking-wider">
+      <h2 className="text-xl md:text-2xl text-center font-bold tracking-wider dark:text-white">
         Services I Offer
       </h2>
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
         {serviceList.map((service, index) => (
           <div
-            className="text-center p-10 shadow-lg rounded-sm mb-4"
+            className="text-center p-10 shadow-lg rounded-sm mb-4 dark:bg-white"
             key={index}
           >
             <Image

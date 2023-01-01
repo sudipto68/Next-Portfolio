@@ -39,7 +39,7 @@ const Portfolio = () => {
   return (
     <>
       <section>
-        <h2 className="text-xl md:text-2xl text-center font-bold tracking-wider">
+        <h2 className="text-xl md:text-2xl text-center font-bold tracking-wider dark:text-white">
           Recent Projects
         </h2>
         <div className="py-8 md:py-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">

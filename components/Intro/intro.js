@@ -11,10 +11,10 @@ const Intro = () => {
           <Image src={devImage} alt="avatar" width="200" height="200" />
         </div>
         <h2 className="text-3xl text-teal-500 pt-4">Sudipto Kumar Mitra</h2>
-        <h3 className="text-xl py-2 text-gray-800 font-bold tracking-wider">
+        <h3 className="text-xl py-2 text-gray-800 font-bold tracking-wider dark:text-white">
           Frontend Developer
         </h3>
-        <p className=" text-md md:text-lg py-2 leading-6 text-gray-800 max-w-prose mx-auto text-justify">
+        <p className="dark:text-white text-md md:text-lg py-2 leading-6 text-gray-800 max-w-prose mx-auto text-justify">
           I am an experienced Frontend web Developer who likes problem solving
           and am a curious mind who loves learning. With hard work, dedication
           and persistence I always try to find effective solutions to complex
@@ -27,21 +27,21 @@ const Intro = () => {
             target="_blank"
             rel="no-refferer noreferrer"
           >
-            <BsGithub />
+            <BsGithub className="dark:text-white" />
           </a>
           <a
             href="https://www.linkedin.com/in/sudipto-kumar-mitra/"
             target="_blank"
             rel="no-refferer noreferrer"
           >
-            <BsLinkedin />
+            <BsLinkedin className="dark:text-white" />
           </a>
           <a
             href="https://www.facebook.com/sudipto.kumar.mitro"
             target="_blank"
             rel="no-refferer noreferrer"
           >
-            <BsFacebook />
+            <BsFacebook className="dark:text-white" />
           </a>
         </div>
       </section>

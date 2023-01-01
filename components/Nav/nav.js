@@ -1,27 +1,37 @@
 import Link from "next/link";
 import React from "react";
-import { BsFillMoonFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
-const Nav = ({ handleClick }) => {
+const Nav = ({ handleClick, darkMode }) => {
   return (
     <>
       <section>
         <nav className=" py-10 mb-12 flex justify-between">
           <Link
             href="/"
-            className="text-xl font-burtons uppercase tracking-widest"
+            className="text-xl font-burtons uppercase tracking-widest dark:text-white"
           >
             Sudipto
           </Link>
           <ul className="flex items-center">
             <li>
-              <BsFillMoonFill
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleClick();
-                }}
-                className=" cursor-pointer text-2xl"
-              />
+              {darkMode ? (
+                <BsFillSunFill
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleClick();
+                  }}
+                  className="text-white cursor-pointer text-2xl"
+                />
+              ) : (
+                <BsFillMoonStarsFill
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleClick();
+                  }}
+                  className=" cursor-pointer text-2xl"
+                />
+              )}
             </li>
             <li>
               <a
