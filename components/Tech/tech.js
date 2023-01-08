@@ -8,6 +8,7 @@ import drupal from "../../public/drupal.png";
 import js from "../../public/js.png";
 import bootstrap from "../../public/bootstrap.png";
 import jqurey from "../../public/jqurey.png";
+import linux from "../../public/linux.png";
 import next from "../../public/next.svg";
 
 const Tech = () => {
@@ -56,6 +57,11 @@ const Tech = () => {
       img: drupal,
       id: 9,
       alt: "drupal",
+    },
+    {
+      img: linux,
+      id: 10,
+      alt: "linux",
     },
   ];
   return (

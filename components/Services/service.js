@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
 import design from "../../public/design.png";
 import code from "../../public/code.png";
 import consulting from "../../public/consulting.png";
+import Card from "../Card/Card";
 
 const Service = () => {
   const serviceList = [
@@ -30,27 +30,18 @@ const Service = () => {
   ];
   return (
     <section>
-      <h2 className="text-xl md:text-2xl text-center font-bold tracking-wider dark:text-white">
+      <h2 className="text-xl md:text-2xl text-center md:pt-3 font-bold tracking-wider dark:text-white">
         Services I Offer
       </h2>
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-8">
         {serviceList.map((service, index) => (
-          <div
-            className="text-center p-10 shadow-lg rounded-sm mb-4 dark:bg-white"
+          <Card
             key={index}
-          >
-            <Image
-              src={service.img}
-              alt={service.alt}
-              width={100}
-              height={100}
-              className="mx-auto transition-all delay-100 hover:scale-110"
-            />
-            <h3 className="font-bold text-xl text-gray-800 py-4">
-              {service.title}
-            </h3>
-            <p className="md:text-lg">{service.description}</p>
-          </div>
+            title={service.title}
+            description={service.description}
+            alt={service.alt}
+            image={service.img}
+          />
         ))}
       </div>
     </section>
