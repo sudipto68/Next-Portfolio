@@ -1,4 +1,6 @@
 import web1 from "../public/web1.png";
+import wonderverse from "../public/wonderverse.png";
+import smalls from "../public/smalls.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
 import gloz from "../public/gloz.png";
@@ -8,6 +10,21 @@ import fmr from "../public/fmr.png";
 import portfolio from "../public/portfolio.png";
 
 export const portfolioList = [
+  {
+    name: "Wonderverse",
+    image: wonderverse,
+    alt: "Wonderverse",
+    category: "react",
+    id: 9,
+    description: [
+      "Next Js",
+      "Tailwind CSS",
+      "Swiper",
+      "Framer Motion",
+      "Wordpress (as backend)",
+    ],
+    live: "https://www.wonderversechicago.com/",
+  },
   {
     name: "Redux Commerce",
     image: web1,
@@ -108,5 +125,14 @@ export const portfolioList = [
     description: ["Backdrop CMS", "SASS", "jQuery"],
     live: "https://fmr.org/",
     github: "",
+  },
+  {
+    name: "SmallsLive",
+    image: smalls,
+    alt: "SmallsLive",
+    category: "django",
+    id: 10,
+    description: ["Python", "Django", "SASS", "Boostrap"],
+    live: "https://smallslive.com/",
   },
 ];

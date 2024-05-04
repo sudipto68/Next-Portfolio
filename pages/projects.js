@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { portfolioList } from "../utils/projectData";
 import PortfolioCard from "../components/Card/PortfolioCard";
+import { motion } from "framer-motion";
 
 const Projects = () => {
-  const types = ["React", "Drupal", "UI"];
+  const types = ["React", "Drupal", "UI", "Django"];
   const [type, setType] = useState(types[0]);
 
   return (
@@ -12,7 +13,19 @@ const Projects = () => {
         Here I have listed all the projects that I have done by myself and in my
         current organization.
       </p>
-      <div className="flex justify-between md:justify-center gap-0 md:gap-28">
+      <motion.div
+        initial={{ opacity: 0, y: "50%" }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+            ease: "easeInOut",
+          },
+        }}
+        viewport={{ once: true, margin: "100px 0px 0px 0px" }}
+        className="flex justify-between md:justify-center gap-0 md:gap-28"
+      >
         {types.map((item, index) => (
           <button
             key={index}
@@ -27,7 +40,7 @@ const Projects = () => {
             {item}
           </button>
         ))}
-      </div>
+      </motion.div>
       <div className="md:py-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {portfolioList
           .filter((item) => item.category.toLowerCase() === type.toLowerCase())

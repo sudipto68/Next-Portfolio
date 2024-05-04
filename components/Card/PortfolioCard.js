@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const PortfolioCard = ({ name, alt, image, description, live, github }) => {
   return (
@@ -17,7 +18,19 @@ const PortfolioCard = ({ name, alt, image, description, live, github }) => {
             <h5 className="text-gray-900 text-lg font-medium mb-2 uppercase">
               {name}
             </h5>
-            <div className="text-base mb-4">
+            <motion.div
+              initial={{ opacity: 0, y: "50%" }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1,
+                  ease: "easeInOut",
+                },
+              }}
+              viewport={{ once: true, margin: "100px 0px 0px 0px" }}
+              className="text-base mb-4"
+            >
               {description.map((item, index) => (
                 <div
                   key={index}
@@ -26,7 +39,7 @@ const PortfolioCard = ({ name, alt, image, description, live, github }) => {
                   {item}
                 </div>
               ))}
-            </div>
+            </motion.div>
             <div className="flex gap-5">
               <a
                 href={live}

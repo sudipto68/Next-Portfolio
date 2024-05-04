@@ -4,6 +4,8 @@ import code from "../../public/code.png";
 import consulting from "../../public/consulting.png";
 import Card from "../Card/Card";
 
+import { motion } from "framer-motion";
+
 const Service = () => {
   const serviceList = [
     {
@@ -33,7 +35,19 @@ const Service = () => {
       <h2 className="text-xl md:text-2xl text-center md:pt-3 font-bold tracking-wider dark:text-white">
         Services I Offer
       </h2>
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-8">
+      <motion.div
+        initial={{ opacity: 0, y: "50%" }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+            ease: "easeInOut",
+          },
+        }}
+        viewport={{ once: true, margin: "100px 0px 0px 0px" }}
+        className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-8"
+      >
         {serviceList.map((service, index) => (
           <Card
             key={index}
@@ -43,7 +57,7 @@ const Service = () => {
             image={service.img}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

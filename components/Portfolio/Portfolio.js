@@ -10,8 +10,8 @@ const Portfolio = () => {
         <h2 className="text-xl md:text-2xl text-center md:pt-6 font-bold tracking-wider dark:text-white">
           Recent Projects
         </h2>
-        <div className="md:py-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {portfolioList.slice(0, 3).map((item, index) => (
+        <div className="md:py-10 md:grid md:grid-cols-2 lg:grid-cols-4 justify-between gap-10">
+          {portfolioList.slice(0, 4).map((item, index) => (
             <PortfolioCard
               key={index}
               name={item.name}
