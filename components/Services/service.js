@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import design from "../../public/design.png";
 import code from "../../public/code.png";

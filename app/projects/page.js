@@ -1,6 +1,7 @@
+"use client";
 import React, { useState } from "react";
-import { portfolioList } from "../utils/projectData";
-import PortfolioCard from "../components/Card/PortfolioCard";
+import { portfolioList } from "../../utils/projectData";
+import PortfolioCard from "../../components/Card/PortfolioCard";
 import { motion } from "framer-motion";
 
 const Projects = () => {

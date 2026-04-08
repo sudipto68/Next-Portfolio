@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Nav from "../Nav/nav.js";
 import { useState } from "react";
