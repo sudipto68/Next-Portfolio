@@ -1,70 +1,55 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const PortfolioCard = ({ name, alt, image, description, live, github }) => {
   return (
-    <>
-      <div className="flex justify-center mt-8 md:mt-0">
-        <div className="rounded-lg shadow-lg bg-white max-w-sm">
-          <Image
-            className="rounded-t-lg"
-            src={image}
-            alt={alt}
-            width={400}
-            height={400}
-          />
-          <div className="p-6">
-            <h5 className="text-gray-900 text-lg font-medium mb-2 uppercase">
-              {name}
-            </h5>
-            <motion.div
-              initial={{ opacity: 0, y: "50%" }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  duration: 1,
-                  ease: "easeInOut",
-                },
-              }}
-              viewport={{ once: true, margin: "100px 0px 0px 0px" }}
-              className="text-base mb-4"
+    <div className="rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:border-cyan-200 dark:hover:border-cyan-700 transition-all duration-300 group h-full flex flex-col">
+      <div className="overflow-hidden h-[180px] flex-shrink-0">
+        <Image
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src={image}
+          alt={alt}
+          width={400}
+          height={180}
+        />
+      </div>
+      <div className="p-5 flex flex-col flex-1">
+        <h5 className="text-gray-900 dark:text-white text-base font-semibold mb-3 uppercase tracking-wide">
+          {name}
+        </h5>
+        <div className="flex flex-wrap gap-1.5 mb-4 flex-1 content-start">
+          {description.map((item, index) => (
+            <span
+              key={index}
+              className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 font-medium text-xs rounded-full"
             >
-              {description.map((item, index) => (
-                <div
-                  key={index}
-                  className="inline-block m-2 ml-0 px-3 py-2.5 bg-gray-200 text-gray-700 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
-                >
-                  {item}
-                </div>
-              ))}
-            </motion.div>
-            <div className="flex gap-5">
-              <a
-                href={live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" inline-block px-4 py-2.5 bg-cyan-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
-              >
-                Live Link
-              </a>
-              {github ? (
-                <a
-                  href={github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" inline-block px-4 py-2.5 bg-cyan-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
-                >
-                  Github Link
-                </a>
-              ) : null}
-            </div>
-          </div>
+              {item}
+            </span>
+          ))}
+        </div>
+        <div className="flex gap-3 mt-auto">
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-medium text-sm rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
+          >
+            Live Link
+          </a>
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium text-sm rounded-lg hover:border-cyan-500 hover:text-cyan-500 dark:hover:border-cyan-400 dark:hover:text-cyan-400 transition-all duration-300"
+            >
+              GitHub
+            </a>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

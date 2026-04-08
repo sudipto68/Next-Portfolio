@@ -10,9 +10,11 @@ const Layout = ({ children }) => {
   };
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="bg-white px-10 dark:bg-gray-900">
-        <Nav handleClick={handleClick} darkMode={darkMode} />
-        <main>{children}</main>
+      <div className="bg-white dark:bg-gray-900 min-h-screen">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <Nav handleClick={handleClick} darkMode={darkMode} />
+          <main>{children}</main>
+        </div>
       </div>
     </div>
   );

@@ -3,19 +3,19 @@ import Image from "next/image";
 
 const Card = ({ image, description, alt, title }) => {
   return (
-    <>
-      <div className="text-center p-10 shadow-[0_3px_8px_1px_rgba(0,0,0,0.3)] rounded-sm mb-6 md:mb-0 dark:bg-white">
+    <div className="text-center p-8 rounded-2xl bg-white dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:border-cyan-200 dark:hover:border-cyan-700 transition-all duration-300 group mb-6 md:mb-0 h-full flex flex-col items-center">
+      <div className="w-20 h-20 mb-5 rounded-full bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center flex-shrink-0">
         <Image
           src={image}
           alt={alt}
-          width={100}
-          height={100}
-          className="mx-auto transition-all delay-100 hover:scale-110"
+          width={52}
+          height={52}
+          className="transition-transform duration-300 group-hover:scale-110"
         />
-        <h3 className="font-bold text-xl text-gray-800 py-4">{title}</h3>
-        <p className="md:text-lg">{description}</p>
       </div>
-    </>
+      <h3 className="font-bold text-xl text-gray-800 dark:text-white pb-3">{title}</h3>
+      <p className="text-gray-500 dark:text-gray-400 leading-relaxed flex-1">{description}</p>
+    </div>
   );
 };
 

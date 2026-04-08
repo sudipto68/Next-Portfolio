@@ -1,115 +1,149 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { BsGithub, BsLinkedin, BsFacebook } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsFacebook, BsChevronDown } from "react-icons/bs";
 import devImage from "../../public/dev.png";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.18, delayChildren: 0.1 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const socialLinks = [
+  { href: "https://github.com/sudipto68", Icon: BsGithub },
+  { href: "https://www.linkedin.com/in/sudipto-kumar-mitra/", Icon: BsLinkedin },
+  { href: "https://www.facebook.com/sudipto.kumar.mitro", Icon: BsFacebook },
+];
+
 const Intro = () => {
   return (
-    <>
-      <section className="text-center">
+    <section className="min-h-[90vh] flex flex-col py-10">
+      <div className="flex-1 flex items-center">
+      <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
+        {/* Left: Text Content */}
         <motion.div
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 1,
-              ease: "easeInOut",
-            },
-          }}
-          viewport={{ once: true, margin: "100px 0px 0px 0px" }}
-          className="relative text-center flex justify-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex-1 text-center md:text-left"
         >
-          <Image src={devImage} alt="avatar" width="200" height="200" />
+          <motion.p
+            variants={itemVariants}
+            className="text-cyan-500 font-semibold tracking-widest uppercase text-sm mb-3"
+          >
+            Hello, I&apos;m
+          </motion.p>
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+          >
+            <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+              Sudipto Kumar Mitra
+            </span>
+          </motion.h1>
+          <motion.h2
+            variants={itemVariants}
+            className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6 tracking-wider"
+          >
+            Frontend Developer
+          </motion.h2>
+          <motion.p
+            variants={itemVariants}
+            className="text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0"
+          >
+            I am an experienced Frontend web Developer who likes problem solving
+            and am a curious mind who loves learning. With hard work, dedication
+            and persistence I always try to find effective solutions to complex
+            problems. My objective is to continually grow via a rewarding and
+            challenging career in software development.
+          </motion.p>
+          <motion.div
+            variants={itemVariants}
+            className="flex gap-4 justify-center md:justify-start mt-8"
+          >
+            {socialLinks.map(({ href, Icon }, i) => (
+              <motion.a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.15, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-cyan-500 hover:text-white dark:hover:bg-cyan-500 dark:hover:text-white transition-colors duration-300"
+              >
+                <Icon className="text-xl" />
+              </motion.a>
+            ))}
+          </motion.div>
         </motion.div>
-        <motion.h2
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 1,
-              ease: "easeInOut",
-            },
-          }}
-          viewport={{ once: true, margin: "100px 0px 0px 0px" }}
-          className="text-3xl text-teal-500 pt-4"
-        >
-          Sudipto Kumar Mitra
-        </motion.h2>
-        <motion.h3
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 1,
-              ease: "easeInOut",
-            },
-          }}
-          viewport={{ once: true, margin: "100px 0px 0px 0px" }}
-          className="text-xl py-2 text-gray-800 font-bold tracking-wider dark:text-white"
-        >
-          Frontend Developer
-        </motion.h3>
-        <motion.p
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 1,
-              ease: "easeInOut",
-            },
-          }}
-          viewport={{ once: true, margin: "100px 0px 0px 0px" }}
-          className="dark:text-white text-md md:text-lg py-2 leading-6 text-gray-800 max-w-prose mx-auto text-justify"
-        >
-          I am an experienced Frontend web Developer who likes problem solving
-          and am a curious mind who loves learning. With hard work, dedication
-          and persistence I always try to find effective solutions to complex
-          problems. My objective is to continually grow via a rewarding and
-          challenging career in software development.
-        </motion.p>
+
+        {/* Right: Image */}
         <motion.div
-          initial={{ opacity: 0, x: "50%" }}
-          whileInView={{
+          initial={{ opacity: 0, scale: 0.75 }}
+          animate={{
             opacity: 1,
-            x: 0,
-            transition: {
-              duration: 2,
-              ease: "easeInOut",
-            },
+            scale: 1,
+            transition: { duration: 0.8, ease: "easeOut", delay: 0.2 },
           }}
-          viewport={{ once: true, margin: "0px 100px 0px 0px" }}
-          className="flex gap-10 justify-center py-4 text-2xl"
+          className="relative flex-shrink-0"
         >
-          <a
-            href="https://github.com/sudipto68"
-            target="_blank"
-            rel="no-refferer noreferrer"
-          >
-            <BsGithub className="dark:text-white" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sudipto-kumar-mitra/"
-            target="_blank"
-            rel="no-refferer noreferrer"
-          >
-            <BsLinkedin className="dark:text-white" />
-          </a>
-          <a
-            href="https://www.facebook.com/sudipto.kumar.mitro"
-            target="_blank"
-            rel="no-refferer noreferrer"
-          >
-            <BsFacebook className="dark:text-white" />
-          </a>
+          {/* Glow */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400 to-teal-400 blur-3xl opacity-25 scale-110" />
+          {/* Gradient ring */}
+          <div className="relative rounded-full p-[3px] bg-gradient-to-br from-cyan-400 to-teal-500">
+            <div className="rounded-full overflow-hidden bg-white dark:bg-gray-900">
+              <Image
+                src={devImage}
+                alt="avatar"
+                width={280}
+                height={280}
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          {/* Spinning dashed ring */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-[-12px] rounded-full border-2 border-dashed border-cyan-300/50 dark:border-cyan-600/50"
+          />
         </motion.div>
-      </section>
-    </>
+      </div>
+      </div>
+
+      {/* Scroll down indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+        className="flex justify-center pb-4"
+      >
+        <motion.button
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          aria-label="Scroll down"
+          className="p-2 rounded-full text-gray-400 dark:text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-300"
+        >
+          <BsChevronDown className="text-2xl" />
+        </motion.button>
+      </motion.div>
+    </section>
   );
 };
 
