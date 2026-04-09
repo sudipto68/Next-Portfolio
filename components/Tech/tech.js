@@ -13,6 +13,7 @@ import jqurey from "../../public/jqurey.png";
 import linux from "../../public/linux.png";
 import next from "../../public/next.svg";
 import shopify from "../../public/shopify.png";
+import vue from "../../public/vue.png";
 
 const containerVariants = {
   hidden: {},
@@ -44,6 +45,7 @@ const Tech = () => {
     { img: drupal, id: 9, alt: "Drupal" },
     { img: linux, id: 10, alt: "Linux" },
     { img: shopify, id: 11, alt: "Shopify", scale: 1.5 },
+    { img: vue, id: 12, alt: "Vue.js" },
   ];
 
   return (
