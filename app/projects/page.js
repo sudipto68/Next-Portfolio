@@ -9,7 +9,7 @@ const Projects = () => {
   const [type, setType] = useState(types[0]);
 
   return (
-    <div className="min-h-screen container mx-auto">
+    <div className="min-h-screen container mx-auto px-4">
       <p className="text-lg text-gray-700 my-8 dark:text-white text-center uppercase">
         Here I have listed all the projects that I have done by myself and in my
         current organization.
@@ -25,7 +25,7 @@ const Projects = () => {
           },
         }}
         viewport={{ once: true, margin: "100px 0px 0px 0px" }}
-        className="flex justify-between md:justify-center gap-0 md:gap-28"
+        className="flex flex-wrap justify-center gap-3 md:gap-6"
       >
         {types.map((item, index) => (
           <button
@@ -36,13 +36,13 @@ const Projects = () => {
             }}
             className={`${
               item === type ? "bg-cyan-600" : "bg-gray-500"
-            } inline-block m-2 ml-0 px-6 py-3 hover:bg-cyan-600 text-white font-semibold text-xs leading-tight tracking-widest  uppercase rounded shadow-md hover:shadow-l focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out`}
+            } px-5 py-2.5 md:px-6 md:py-3 hover:bg-cyan-600 text-white font-semibold text-xs leading-tight tracking-widest uppercase rounded shadow-md hover:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out`}
           >
             {item}
           </button>
         ))}
       </motion.div>
-      <div className="md:py-10 md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="py-6 md:py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {portfolioList
           .filter((item) => item.category.toLowerCase() === type.toLowerCase())
           .map((item, index) => (

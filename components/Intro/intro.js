@@ -64,7 +64,7 @@ const Intro = () => {
             variants={itemVariants}
             className="text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0"
           >
-            I am an experienced Frontend web Developer who likes problem solving
+            I am an experienced Frontend Web Developer who likes problem solving
             and am a curious mind who loves learning. With hard work, dedication
             and persistence I always try to find effective solutions to complex
             problems. My objective is to continually grow via a rewarding and

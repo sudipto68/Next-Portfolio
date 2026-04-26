@@ -2,13 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BsStars } from "react-icons/bs";
 import react from "../../public/react.png";
 import html from "../../public/html.png";
 import css from "../../public/css.png";
 import sass from "../../public/sass.png";
 import drupal from "../../public/drupal.png";
 import js from "../../public/js.png";
-import bootstrap from "../../public/bootstrap.png";
+import tailwind from "../../public/tailwind.png";
 import jqurey from "../../public/jqurey.png";
 import linux from "../../public/linux.png";
 import next from "../../public/next.svg";
@@ -37,7 +38,7 @@ const Tech = () => {
     { img: html, id: 1, alt: "HTML" },
     { img: css, id: 2, alt: "CSS" },
     { img: sass, id: 3, alt: "SASS" },
-    { img: bootstrap, id: 4, alt: "Bootstrap" },
+    { img: tailwind, id: 4, alt: "Tailwind CSS" },
     { img: js, id: 5, alt: "JavaScript" },
     { img: jqurey, id: 6, alt: "jQuery" },
     { img: react, id: 7, alt: "React" },
@@ -49,7 +50,7 @@ const Tech = () => {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -96,6 +97,48 @@ const Tech = () => {
             </span>
           </motion.div>
         ))}
+      </motion.div>
+
+      {/* AI Tools subsection */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mt-14"
+      >
+        {/* divider label */}
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent to-cyan-200 dark:to-cyan-800/60" />
+          <span className="flex items-center gap-1.5 text-xs font-mono font-bold tracking-widest uppercase text-cyan-500 whitespace-nowrap">
+            <BsStars size={13} />
+            AI Tools I Use Daily
+          </span>
+          <div className="flex-1 h-px bg-gradient-to-l from-transparent to-cyan-200 dark:to-cyan-800/60" />
+        </div>
+
+        {/* tool badges */}
+        <div className="flex flex-wrap justify-center gap-3">
+          {["Claude Code", "ChatGPT", "Antigravity", "GitHub Copilot", "Cursor"].map((tool, i) => (
+            <motion.span
+              key={tool}
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: i * 0.07 }}
+              whileHover={{ scale: 1.06, y: -2 }}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-cyan-200 dark:border-cyan-800/70 bg-cyan-50 dark:bg-cyan-900/20 text-sm font-medium text-cyan-700 dark:text-cyan-300 cursor-default transition-colors duration-200 hover:border-cyan-400 dark:hover:border-cyan-600"
+            >
+              <BsStars size={12} />
+              {tool}
+            </motion.span>
+          ))}
+        </div>
+
+        <p className="text-center text-xs text-gray-400 dark:text-gray-600 mt-5 max-w-md mx-auto leading-relaxed">
+          I regularly integrate AI tools into my workflow to accelerate development,
+          improve code quality, and deliver better results faster.
+        </p>
       </motion.div>
     </section>
   );

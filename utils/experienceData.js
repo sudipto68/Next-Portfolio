@@ -11,7 +11,7 @@ export const experienceList = [
       "Developed and maintained web applications using React, Next.js, and Vue.js with a focus on performance and scalability",
       "Built headless CMS architectures using Drupal 11/12 as backend with React.js frontends, enabling decoupled content delivery via JSON:API",
       "Improved website performance and loading times through code optimization",
-      "Customized and extended Drupal CMS with custom block plugins, REST API configurations, and module integrations",
+      "Delivering technical support and leading upgrades from Drupal 9 to Drupal 10 and 11",
       "Implemented BackstopJS-based visual regression testing pipeline on server infrastructure to monitor and detect UI changes across multiple live sites",
       "Handled end-to-end Drupal deployment pipelines on Linux (Ubuntu) servers with Nginx, including troubleshooting and maintaining production stability"
     ],

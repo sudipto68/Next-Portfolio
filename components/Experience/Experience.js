@@ -5,7 +5,7 @@ import { experienceList } from "../../utils/experienceData";
 
 const Experience = () => {
   return (
-    <section className="py-16">
+    <section className="py-8">
       {/* Section header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
