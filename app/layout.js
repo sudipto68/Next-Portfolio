@@ -2,9 +2,39 @@ import "../styles/globals.css";
 import Layout from "../components/Layout/Layout";
 
 export const metadata = {
-  title: "Sudipto Kumar Mitra Portfolio",
-  description: "Sudipto Kumar Mitra Portfolio",
+  title: "Sudipto Kumar Mitra | Frontend Developer",
+  description:
+    "Sudipto Kumar Mitra — Frontend Developer specializing in React, Next.js, and modern web technologies. Building responsive, performant web applications.",
+  keywords: [
+    "Sudipto Kumar Mitra",
+    "Frontend Developer",
+    "Software Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "Web Developer",
+    "JavaScript Developer",
+    "Shopify Developer",
+    "React Native",
+    "Tailwind CSS",
+    "Drupal Developer",
+    "Portfolio",
+  ],
+  authors: [{ name: "Sudipto Kumar Mitra" }],
+  creator: "Sudipto Kumar Mitra",
   icons: { icon: "/favicon.ico" },
+  openGraph: {
+    type: "website",
+    title: "Sudipto Kumar Mitra | Frontend Developer",
+    description:
+      "Frontend Developer specializing in React, Next.js, and modern web technologies.",
+    siteName: "Sudipto Kumar Mitra Portfolio",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sudipto Kumar Mitra | Frontend Developer",
+    description:
+      "Frontend Developer specializing in React, Next.js, and modern web technologies.",
+  },
 };
 
 export default function RootLayout({ children }) {
