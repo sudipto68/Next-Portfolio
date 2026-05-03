@@ -20,8 +20,8 @@ const Portfolio = () => {
         </h2>
         <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto rounded-full" />
       </motion.div>
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
-        {portfolioList.slice(0, 4).map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        {portfolioList.slice(0, 3).map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}
@@ -34,6 +34,7 @@ const Portfolio = () => {
               name={item.name}
               alt={item.alt}
               description={item.description}
+              summary={item.summary}
               image={item.image}
               live={item.live}
               github={item.github}

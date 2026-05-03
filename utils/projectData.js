@@ -1,36 +1,70 @@
 import web1 from "../public/web1.png";
-import wonderverse from "../public/wonderverse.png";
+import scholarstone from "../public/scholarstone.png";
 import smalls from "../public/smalls.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
 import gloz from "../public/gloz.png";
 import web4 from "../public/web4.png";
-import bio from "../public/bio.png";
+import casp from "../public/casp.png";
 import fmr from "../public/fmr.png";
-import portfolio from "../public/portfolio.png";
+import lls from "../public/lls.png";
+import crabarian from "../public/crabarian.png";
+import mkn from "../public/mkn.png";
+import dt from "../public/dt.png";
+import jazz from "../public/jazz.png";
 
 export const portfolioList = [
   {
-    name: "Wonderverse",
-    image: wonderverse,
-    alt: "Wonderverse",
-    category: "react",
+    name: "ScholarStone Academy",
+    image: scholarstone,
+    alt: "ScholarStone Academy",
+    category: "webapp",
     id: 9,
+    summary: "An online academy platform with course listings, student enrollment, and a modern learning experience.",
     description: [
-      "Next Js",
+      "Vue Js",
       "Tailwind CSS",
       "Swiper",
-      "Framer Motion",
-      "Wordpress (as backend)",
+      "Headless UI",
+      "Pinia",
+      "Django Drf",
     ],
-    live: "https://www.wonderversechicago.com/",
+    live: "https://www.scholarstone.academy",
+  },
+  {
+    name: "Exporter Crabarian",
+    image: crabarian,
+    alt: "Exporter Crabarian",
+    category: "webapp",
+    id: 11,
+    summary: "A seafood export management platform enabling businesses to manage products, orders, and client communications.",
+    description: [
+      "Vue Js",
+      "Tailwind CSS",
+      "Ant Design",
+      "Pinia",
+      "Django Drf",
+    ],
+    live: "https://exporter.crabarian.com/",
+  },
+  {
+    name: "CASP",
+    image: casp,
+    alt: "CASP",
+    category: "drupal",
+    id: 6,
+    summary: "An interdisciplinary research initiative studying complex living phenomena like cognition and development. Upgraded from Drupal 9 to Drupal 11 and fully redesigned with a refreshed layout.",
+    description: ["Drupal 11", "SASS", "jQuery", "Layout Builder"],
+    live: "https://www.biologicalpurpose.org/",
+    github: "",
   },
   {
     name: "Redux Commerce",
     image: web1,
     alt: "Redux Commerce",
-    category: "react",
+    category: "webapp",
     id: 1,
+    summary: "A fully functional e-commerce application with cart management, product filtering, and global state handled via Redux Toolkit.",
     description: [
       "React Js",
       "React Router",
@@ -43,20 +77,47 @@ export const portfolioList = [
     github: "https://github.com/sudipto68/redux-toolkit-ecommerce-pratice",
   },
   {
-    name: "Triplo Headless",
-    image: web3,
-    alt: "Triplo Headless",
+    name: "Midwest Kindey Network",
+    image: mkn,
+    alt: "MKN",
+    category: "drupal",
+    id: 9,
+    summary: "A healthcare network website built to connect kidney patients and professionals with resources and support.",
+    description: ["Backdrop CMS", "SASS", "jQuery", "Bootstrap"],
+    live: "https://www.midwestkidneynetwork.org",
+    github: "",
+  },
+  {
+    name: "Dear Teacher",
+    image: dt,
+    alt: "Dear Teacher",
+    category: "drupal",
+    id: 12,
+    summary: "An educational platform offering expert guidance and tools to help children succeed in school, from preschool through college. Upgraded from Drupal 9 to Drupal 11 and fully redesigned.",
+    description: ["Drupal 11", "SASS", "jQuery", "Bootstrap"],
+    live: "https://www.dearteacher.com",
+    github: "",
+  },
+  {
+    name: "Logic Layer Solutions",
+    image: lls,
+    alt: "Logic Layer Solutions",
     category: "react",
-    id: 2,
-    description: [
-      "React Js",
-      "React Router",
-      "React Bootstrap",
-      "React Hook Form",
-      "Backdrop CMS",
-      "SASS",
-    ],
-    live: "http://headless-react.dev.triplo.co/",
+    id: 8,
+    summary: "A corporate website for a software solutions company, featuring animated sections and a clean, professional design.",
+    description: ["Next Js 16", "Tailwind Css", "Framer Motion"],
+    live: "https://logiclayersolution.vercel.app",
+    github: "",
+  },
+  {
+    name: "Jazz Cultural",
+    image: jazz,
+    alt: "Jazz Cultural",
+    category: "react",
+    id: 13,
+    summary: "A music room and café on Restaurant Row in Times Square, NYC — a tribute to Barry Harris and his Jazz Cultural Theater. Partner site of SmallsLive.",
+    description: ["Vue JS", "Tailwind Css", "Framer Motion", "Axios"],
+    live: "https://www.jazzcultural.com/",
     github: "",
   },
   {
@@ -65,6 +126,7 @@ export const portfolioList = [
     alt: "Interrior",
     category: "react",
     id: 3,
+    summary: "An interior design marketplace where users can browse services, connect with designers, and manage bookings.",
     description: [
       "React Js",
       "React Router",
@@ -77,21 +139,12 @@ export const portfolioList = [
     github: "https://github.com/sudipto68/Interrior-client",
   },
   {
-    name: "Next Portfolio",
-    image: portfolio,
-    alt: "Portfolio",
-    category: "react",
-    id: 8,
-    description: ["Next Js", "Tailwind Css"],
-    live: "https://sudipto-portfolio.vercel.app/",
-    github: "https://github.com/sudipto68/Next-Portfolio",
-  },
-  {
     name: "Glozzom",
     image: gloz,
     alt: "Glozzom",
     category: "ui",
     id: 4,
+    summary: "A responsive multi-section landing page with smooth animations and a modern visual design.",
     description: ["Html", "SASS", "Bootstrap"],
     live: "https://sudipto68.github.io/Glozzom/",
     github: "https://github.com/sudipto68/Glozzom",
@@ -102,19 +155,10 @@ export const portfolioList = [
     alt: "Nike",
     category: "ui",
     id: 5,
+    summary: "A pixel-perfect responsive clone of the Nike e-commerce storefront, built as a front-end practice project.",
     description: ["Html", "CSS", "Bootstrap"],
     live: "https://sudipto68.github.io/Responsive-Ecommerce-Web/",
     github: "https://github.com/sudipto68/Responsive-Ecommerce-Web",
-  },
-  {
-    name: "Biological Purposes",
-    image: bio,
-    alt: "BioLogical Purpose",
-    category: "drupal",
-    id: 6,
-    description: ["Drupal 9", "SASS", "jQuery"],
-    live: "https://www.biologicalpurpose.org/",
-    github: "",
   },
   {
     name: "FMR",
@@ -122,6 +166,7 @@ export const portfolioList = [
     alt: "FMR",
     category: "drupal",
     id: 7,
+    summary: "A conservation nonprofit website built on Backdrop CMS, focused on accessibility and content-driven storytelling.",
     description: ["Backdrop CMS", "SASS", "jQuery"],
     live: "https://fmr.org/",
     github: "",
@@ -132,6 +177,7 @@ export const portfolioList = [
     alt: "SmallsLive",
     category: "django",
     id: 10,
+    summary: "A live jazz streaming and archiving platform where fans can watch performances and explore a rich music library.",
     description: ["Python", "Django", "SASS", "Boostrap"],
     live: "https://smallslive.com/",
   },

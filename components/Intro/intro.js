@@ -1,9 +1,38 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { BsGithub, BsLinkedin, BsFacebook, BsChevronDown } from "react-icons/bs";
 import devImage from "../../public/dev.png";
 import { motion } from "framer-motion";
+
+const FULL_NAME = "Sudipto Kumar Mitra";
+
+const TypingName = () => {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    if (displayed.length < FULL_NAME.length) {
+      const timeout = setTimeout(() => {
+        setDisplayed(FULL_NAME.slice(0, displayed.length + 1));
+      }, 80);
+      return () => clearTimeout(timeout);
+    } else {
+      setDone(true);
+    }
+  }, [displayed]);
+
+  return (
+    <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+      {displayed}
+      <span
+        className={`inline-block w-[3px] h-[0.85em] ml-1 align-middle bg-cyan-400 rounded-sm ${
+          done ? "animate-pulse" : ""
+        }`}
+      />
+    </span>
+  );
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,9 +79,7 @@ const Intro = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
           >
-            <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
-              Sudipto Kumar Mitra
-            </span>
+            <TypingName />
           </motion.h1>
           <motion.h2
             variants={itemVariants}

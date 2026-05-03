@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-const PortfolioCard = ({ name, alt, image, description, live, github }) => {
+const PortfolioCard = ({ name, alt, image, description, summary, live, github }) => {
   return (
     <div className="rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:border-cyan-200 dark:hover:border-cyan-700 transition-all duration-300 group h-full flex flex-col">
       <div className="overflow-hidden h-[180px] flex-shrink-0">
@@ -15,9 +15,14 @@ const PortfolioCard = ({ name, alt, image, description, live, github }) => {
         />
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <h5 className="text-gray-900 dark:text-white text-base font-semibold mb-3 uppercase tracking-wide">
+        <h5 className="text-gray-900 dark:text-white text-base font-semibold mb-2 uppercase tracking-wide">
           {name}
         </h5>
+        {summary && (
+          <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed mb-3">
+            {summary}
+          </p>
+        )}
         <div className="flex flex-wrap gap-1.5 mb-4 flex-1 content-start">
           {description.map((item, index) => (
             <span

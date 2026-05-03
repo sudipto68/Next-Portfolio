@@ -88,7 +88,7 @@ const Tech = () => {
                   fill
                   alt={item.alt}
                   style={{ objectFit: "contain" }}
-                  className="grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="grayscale group-hover:grayscale-0 dark:grayscale-0 transition-all duration-300"
                 />
               </div>
             </div>
