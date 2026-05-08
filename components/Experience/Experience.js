@@ -69,7 +69,7 @@ const Experience = () => {
                 </div>
 
                 {/* Description bullets */}
-                <ul className="space-y-1.5 mb-4">
+                <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-1.5 mb-4">
                   {exp.description.map((point, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0" />

@@ -1,4 +1,6 @@
 import web1 from "../public/web1.png";
+import psl from "../public/psl.png";
+import edp from "../public/edp.png";
 import scholarstone from "../public/scholarstone.png";
 import smalls from "../public/smalls.png";
 import web2 from "../public/web2.png";
@@ -46,6 +48,28 @@ export const portfolioList = [
       "Django Drf",
     ],
     live: "https://exporter.crabarian.com/",
+  },
+  {
+    name: "Pollution Solution",
+    image: psl,
+    alt: "Pollution Solution",
+    category: "drupal",
+    id: 14,
+    summary: "An environmental auditing and certification firm offering ESG reporting, sustainability verification, and compliance services to industry. Built on Drupal 11 with a clean, content-driven layout using Layout Builder.",
+    description: ["Drupal 11", "SASS", "jQuery", "Layout Builder"],
+    live: "https://www.pollution-solution.net/",
+    github: "",
+  },
+  {
+    name: "EduPolicy.ai",
+    image: edp,
+    alt: "EduPolicy.ai",
+    category: "drupal",
+    id: 15,
+    summary: "A consultancy helping colleges and universities develop responsible AI policies and governance frameworks. Developed on Drupal 11 using Layout Builder for flexible, structured content management.",
+    description: ["Drupal 11", "SASS", "jQuery", "Layout Builder"],
+    live: "https://edupolicysite.idlewilddigital.com/",
+    github: "",
   },
   {
     name: "CASP",
