@@ -1,0 +1,141 @@
+/* ---------- Tokens: airy sky (light) and deep navy (dark) ---------- */
+:root {
+  --font-display: var(--font-bricolage), 'Segoe UI', system-ui, sans-serif;
+  --font-body: var(--font-figtree), 'Segoe UI', system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Menlo, Consolas, monospace;
+  --font-hand: var(--font-caveat), 'Segoe Print', cursive;
+
+  --bg: #f5f8ff;
+  --ink: #0b1020;
+  --muted: #586177;
+  --line: rgba(11, 16, 32, .1);
+  --glass: rgba(255, 255, 255, .62);
+  --glass-edge: rgba(255, 255, 255, .95);
+  --hero-1: #a9c9ff;
+  --hero-2: #e6f0ff;
+  --shadow: 0 24px 60px -28px rgba(40, 80, 170, .35);
+  --lime: #c8f13c;
+  --on-lime: #0b1020;
+  --code-k: #6a4df0;
+  --code-s: #0c8a5c;
+
+  --dark: #05070d;
+  --dark-ink: #eef2fb;
+  --dark-muted: #98a3ba;
+  --dark-line: rgba(255, 255, 255, .12);
+
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --nav-h: 64px;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #070b16;
+    --ink: #eef2fb;
+    --muted: #9aa5bd;
+    --line: rgba(255, 255, 255, .12);
+    --glass: rgba(255, 255, 255, .06);
+    --glass-edge: rgba(255, 255, 255, .14);
+    --hero-1: #1c3b8f;
+    --hero-2: #0a1431;
+    --shadow: 0 24px 60px -28px rgba(0, 0, 0, .8);
+    --code-k: #c8f13c;
+    --code-s: #8fe8c4;
+    --dark: #03050a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #070b16;
+  --ink: #eef2fb;
+  --muted: #9aa5bd;
+  --line: rgba(255, 255, 255, .12);
+  --glass: rgba(255, 255, 255, .06);
+  --glass-edge: rgba(255, 255, 255, .14);
+  --hero-1: #1c3b8f;
+  --hero-2: #0a1431;
+  --shadow: 0 24px 60px -28px rgba(0, 0, 0, .8);
+  --code-k: #c8f13c;
+  --code-s: #8fe8c4;
+  --dark: #03050a;
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 90px); }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.6;
+  overflow-x: clip; -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10;
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+::selection { background: var(--lime); color: var(--on-lime); }
+.wrap { width: min(1180px, 100% - 2.5rem); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+main, footer { position: relative; z-index: 1; }
+.hand { font-family: var(--font-hand); font-weight: 600; font-size: 1.55rem; line-height: 1.05; }
+
+/* ---------- Shared bits ---------- */
+.chip {
+  display: inline-flex; align-items: center; gap: .55rem; padding: .36rem .9rem; border: 1px solid var(--line);
+  border-radius: 99px; background: var(--glass); font-size: .85rem; font-weight: 500;
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.chip.dot::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 3px color-mix(in srgb, var(--lime) 35%, transparent); }
+.live::before { content: ""; flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--lime) 30%, transparent); } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: .55rem; padding: .85rem 1.4rem; border-radius: 99px; border: 1px solid transparent;
+  text-decoration: none; font: 600 1rem var(--font-body); cursor: pointer;
+  transition: background .3s, color .3s, border-color .3s;
+}
+.btn svg { width: 14px; height: 14px; transition: transform .35s var(--ease); }
+.btn:hover svg { transform: translate(3px, -3px); }
+.btn-lime { background: var(--lime); color: var(--on-lime); }
+.btn-lime:hover { background: var(--ink); color: var(--bg); }
+.btn-glass { background: var(--glass-edge); color: var(--ink); border-color: var(--line); }
+.btn-glass:hover { background: var(--ink); color: var(--bg); }
+.btn-dark { background: var(--dark); color: var(--dark-ink); }
+.btn-dark:hover { background: var(--lime); color: var(--on-lime); }
+.btn-line { border-color: var(--dark-line); color: var(--dark-ink); background: rgba(255, 255, 255, .05); }
+.btn-line:hover { background: var(--dark-ink); color: var(--dark); }
+.btn.sm { padding: .6rem 1.1rem; font-size: .92rem; }
+
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; padding: 0; margin: 0; list-style: none; }
+.chips li { padding: .2rem .7rem; border: 1px solid var(--line); border-radius: 99px; font-size: .8rem; font-weight: 500; background: var(--glass); }
+
+.title { margin: 0; font-family: var(--font-display); font-weight: 500; letter-spacing: -.04em; line-height: 1.04; font-size: clamp(2.1rem, 5.2vw, 4rem); text-wrap: balance; }
+.mask { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .14em; margin-bottom: -.14em; }
+.w { display: inline-block; transform: translateY(112%); transition: transform 1s var(--ease); transition-delay: var(--d, 0ms); }
+.in .w { transform: none; }
+html:not(.js) .w { transform: none; }
+.lead { margin: 1.1rem 0 0; color: var(--muted); font-size: 1.12rem; max-width: 38rem; }
+.center { text-align: center; }
+.center .lead { margin-inline: auto; }
+.section { padding: clamp(4.5rem, 10vw, 8rem) 0; }
+
+.js [data-rise] { opacity: 0; transform: translateY(36px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0ms); }
+.js [data-rise].in { opacity: 1; transform: none; }
+
+.dark { position: relative; background: var(--dark); color: var(--dark-ink); overflow: hidden; }
+.dark .lead { color: var(--dark-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .live::before { animation: none; }
+  .w { transform: none; transition: none; }
+  .js [data-rise] { opacity: 1; transform: none; transition: none; }
+}

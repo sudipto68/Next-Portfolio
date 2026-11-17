@@ -1,0 +1,37 @@
+[
+  {
+    "role": "Senior Software Engineer",
+    "org": "Idlewild Digital",
+    "start": "2026-07-01",
+    "end": null,
+    "points": [
+      "Lead the design, development and scaling of web applications in Next.js, Vue.js, Drupal and Django.",
+      "Tune performance with a focus on Core Web Vitals.",
+      "Mentor teammates and look after code quality across projects."
+    ],
+    "stack": ["Next.js", "React Native", "Drupal", "Django"]
+  },
+  {
+    "role": "Software Engineer",
+    "org": "Idlewild Digital",
+    "start": "2023-07-01",
+    "end": "2026-06-01",
+    "points": [
+      "Migrated legacy Drupal 8/9 sites to Drupal 10/11 with minimal downtime.",
+      "Wrote reusable custom Drupal modules to extend core.",
+      "Deployed and maintained production applications on Ubuntu with Nginx and Docker."
+    ],
+    "stack": ["Drupal", "JavaScript", "Docker", "Nginx"]
+  },
+  {
+    "role": "Junior Software Engineer",
+    "org": "Idlewild Digital",
+    "start": "2021-07-01",
+    "end": "2023-06-01",
+    "points": [
+      "Designed and delivered custom Drupal websites and web applications.",
+      "Built front ends in Next.js, Vue.js and React."
+    ],
+    "stack": ["Drupal", "React"]
+  }
+]

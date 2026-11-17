@@ -1,0 +1,27 @@
+.wrap {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 20; pointer-events: none;
+  padding: calc(env(safe-area-inset-top, 0px) + 12px) 1rem 0;
+  transition: transform .55s var(--ease);
+}
+.hide { transform: translateY(-130%); }
+.nav {
+  pointer-events: auto; width: min(1120px, 100%); margin-inline: auto; height: var(--nav-h); padding: 0 .8rem 0 1rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  background: color-mix(in srgb, var(--bg) 62%, transparent); border: 1px solid var(--glass-edge); border-radius: 99px;
+  -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4); box-shadow: var(--shadow);
+}
+.brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; }
+.logo { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--lime); color: var(--on-lime); font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; }
+.brandText { display: grid; line-height: 1.15; }
+.brandText b { font-family: var(--font-display); font-weight: 700; font-size: 1rem; letter-spacing: -.02em; }
+.brandText small { color: var(--muted); font-size: .75rem; }
+.links { display: flex; gap: clamp(1rem, 2.4vw, 2rem); }
+.links a { text-decoration: none; font-weight: 500; font-size: .95rem; color: var(--muted); transition: color .25s; }
+.links a:hover, .links a[aria-current="page"] { color: var(--ink); }
+.right { display: flex; align-items: center; gap: .6rem; }
+.iconBtn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--glass-edge); color: var(--ink); cursor: pointer; transition: background .25s, color .25s, transform .4s; }
+.iconBtn:hover { background: var(--ink); color: var(--bg); transform: rotate(180deg); }
+.iconBtn svg { width: 18px; height: 18px; }
+@media (max-width: 1020px) { .links { display: none; } }
+@media (max-width: 520px) { .brandText small { display: none; } .right :global(.btn.sm) { padding: .55rem .9rem; } }
+@media (prefers-reduced-motion: reduce) { .wrap { transition: none; } }
