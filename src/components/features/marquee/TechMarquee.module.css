@@ -1,0 +1,14 @@
+.strip { padding: 1.6rem 0 0; }
+.label { text-align: center; color: var(--muted); font-size: .9rem; margin: 0 0 1.1rem; }
+.marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
+.track { display: flex; width: max-content; animation: scroll 44s linear infinite; }
+.marquee:hover .track { animation-play-state: paused; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+.half { display: flex; flex-shrink: 0; }
+.tech { display: inline-flex; align-items: center; gap: .7rem; margin-right: clamp(2.5rem, 6vw, 5rem); font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.8rem); letter-spacing: -.02em; white-space: nowrap; }
+.tech i { width: 14px; height: 14px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 28%, transparent); }
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+  .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .half[aria-hidden="true"] { display: none; }
+}

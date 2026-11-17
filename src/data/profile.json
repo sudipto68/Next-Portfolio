@@ -1,0 +1,92 @@
+{
+  "name": "Sudipto Kumar Mitra",
+  "shortName": "Sudipto K. Mitra",
+  "title": "Senior Software Engineer",
+  "company": "Idlewild Digital",
+  "location": "Dhaka, Bangladesh",
+  "timezone": "Asia/Dhaka",
+  "utcLabel": "UTC+6",
+  "email": "sudiptomitro2016@gmail.com",
+  "links": {
+    "linkedin": "https://bd.linkedin.com/in/sudipto-kumar-mitra",
+    "github": "https://github.com/sudipto68",
+    "medium": "https://sudipto-kumar-mitra.medium.com/",
+    "forum": "https://forum.backdropcms.org"
+  },
+  "rightNow": "Rebuilding this site on Next.js and Payload CMS.",
+  "stickers": [
+    { "label": "Backdrop CMS maintainer", "tone": "lime" },
+    { "label": "Drupal 8 → 11", "tone": "white" },
+    { "label": "UTC+6", "tone": "coral" }
+  ],
+  "code": {
+    "frontend": ["React", "Next.js", "Vue"],
+    "backend": ["Django", "FastAPI"],
+    "cms": ["Drupal", "Backdrop"],
+    "maintains": ["backstop_generator", "domain_path"]
+  },
+  "tech": [
+    { "name": "Drupal", "color": "#2f6fed" },
+    { "name": "React", "color": "#6ea2ff" },
+    { "name": "Next.js", "color": "#0b1020" },
+    { "name": "Vue.js", "color": "#3ddc97" },
+    { "name": "Django", "color": "#0c8a5c" },
+    { "name": "FastAPI", "color": "#14b8a6" },
+    { "name": "Backdrop CMS", "color": "#ff8f72" },
+    { "name": "Docker", "color": "#38bdf8" },
+    { "name": "Nginx", "color": "#22c55e" }
+  ],
+  "layers": [
+    {
+      "title": "Interfaces",
+      "shape": "leaf",
+      "chips": ["React", "Next.js", "Vue.js"],
+      "text": "Front ends in React, Next.js and Vue. I spend a lot of time on Core Web Vitals, because a fast page is the feature people notice first."
+    },
+    {
+      "title": "Services",
+      "shape": "rings",
+      "chips": ["FastAPI", "Django", "Docker"],
+      "text": "Django and FastAPI back ends, deployed on Ubuntu servers with Nginx and Docker."
+    },
+    {
+      "title": "Content platforms",
+      "shape": "slabs",
+      "chips": ["Drupal", "Backdrop CMS"],
+      "text": "Custom Drupal sites and modules, Drupal 8/9 to 10/11 migrations, and Backdrop CMS."
+    }
+  ],
+  "copy": {
+    "navCta": "Say hello",
+    "heroChip": "Idlewild Digital · Dhaka, Bangladesh",
+    "heroLede": "I’m a senior software engineer. For five years I’ve built **Drupal** sites and the **React, Next.js and Vue** front ends that sit on top of them. On the side, I maintain modules for **Backdrop CMS**.",
+    "heroPrimary": "See what I’ve built",
+    "heroSecondary": "Experience",
+    "stickerHint": "the stickers drag",
+    "stripLabel": "What’s usually open on my machine",
+    "stackHeading": "What I work with",
+    "stackHand": "front end first, but I don’t stop there",
+    "stackIntro": "I started in front-end development and it’s still where I’m most at home. Agency work pulled me further down the stack, so these days I also write Drupal modules, build Django services and deploy the result myself.",
+    "workHeading": "Things I’ve built",
+    "workIntro": "One product of my own, and two side projects I made because I needed them.",
+    "workButton": "More on GitHub",
+    "clientHeading": "Client work",
+    "clientIntro": "Sites and apps I’ve built for clients at Idlewild Digital and on my own: Drupal and Backdrop builds, Vue and Django apps, and a few early front-end projects.",
+    "clientButton": "All client work",
+    "clientPageIntro": "Everything I’ve shipped for clients, plus the front-end projects I learned on. Filter by the kind of build.",
+    "experienceHeading": "Five years at Idlewild Digital",
+    "experienceIntro": "Full-time and on-site in Uttara, Dhaka, since July 2021. Three titles so far.",
+    "educationHeading": "Before that, university",
+    "ossHeading": "Open source",
+    "ossIntro": "Most of my open-source time goes to Backdrop CMS. I work the issue queue, submit bug fixes, and contribute modules and recipes back to backdropcms.org.",
+    "ossSince": "since September 2024",
+    "contactHeading": "Say hello.",
+    "contactIntro": "Email is the best way to reach me. My work history is on LinkedIn, and the code is on GitHub.",
+    "footerHeading": "Thanks for scrolling this far.",
+    "footerNote": "Last updated November 2026."
+  },
+  "seo": {
+    "title": "Sudipto Kumar Mitra · Senior Software Engineer",
+    "description": "Sudipto Kumar Mitra is a senior software engineer at Idlewild Digital in Dhaka, working with Drupal, React, Next.js, Vue.js and Django, and a maintainer of Backdrop CMS modules."
+  }
+}

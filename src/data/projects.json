@@ -1,0 +1,38 @@
+[
+  {
+    "title": "MediSerial",
+    "type": "SaaS product, my own",
+    "year": "2026",
+    "tags": ["Next.js", "SaaS", "PWA"],
+    "mockType": "serial",
+    "screenshot": {
+      "src": "/mediserial.webp",
+      "alt": "MediSerial home page with doctor search and the live serial tracker",
+      "width": 2880,
+      "height": 1700
+    },
+    "gradient": "mint",
+    "liveUrl": "https://www.mediserial.app",
+    "description": "In Bangladesh you can wait half a day at a doctor’s chamber for your serial. MediSerial lets patients book online and watch the queue live, with an SMS if the doctor runs late. Doctors and diagnostic centres get chamber management and digital prescriptions."
+  },
+  {
+    "title": "Dev Break Enforcer",
+    "type": "Chrome extension",
+    "year": "2026",
+    "tags": ["Chrome extension", "JavaScript"],
+    "mockType": "lock",
+    "gradient": "peach",
+    "sourceUrl": "https://github.com/sudipto68/dev-break-enforcer",
+    "description": "Every break reminder I tried sent a notification, and I dismissed it in half a second. This one locks every tab until I walk for a minute and drink some water."
+  },
+  {
+    "title": "DESCO Balance Bot",
+    "type": "Telegram bot",
+    "year": "2025",
+    "tags": ["Node.js", "Telegram"],
+    "mockType": "chat",
+    "gradient": "violet",
+    "sourceUrl": "https://github.com/sudipto68/node-desco-bot",
+    "description": "A small bot that checks my DESCO prepaid electricity meter every day and messages me on Telegram before the balance runs out."
+  }
+]

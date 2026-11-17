@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "scholarstone",
+    "name": "ScholarStone Academy",
+    "category": "webapp",
+    "featured": true,
+    "summary": "An online academy platform with course listings, student enrollment, and a modern learning experience.",
+    "tags": ["Vue.js", "Tailwind CSS", "Swiper", "Headless UI", "Pinia", "Django DRF"],
+    "image": { "src": "/scholarstone.png", "alt": "ScholarStone Academy home page", "width": 2880, "height": 1346 },
+    "liveUrl": "https://www.scholarstone.academy"
+  },
+  {
+    "slug": "crabarian",
+    "name": "Exporter Crabarian",
+    "category": "webapp",
+    "featured": true,
+    "summary": "A seafood export management platform enabling businesses to manage products, orders, and client communications.",
+    "tags": ["Vue.js", "Tailwind CSS", "Ant Design", "Pinia", "Django DRF"],
+    "image": { "src": "/crabarian.png", "alt": "Exporter Crabarian dashboard", "width": 2880, "height": 1346 },
+    "liveUrl": "https://exporter.crabarian.com/"
+  },
+  {
+    "slug": "pollution-solution",
+    "name": "Pollution Solution",
+    "category": "drupal",
+    "featured": true,
+    "summary": "An environmental auditing and certification firm offering ESG reporting, sustainability verification, and compliance services to industry. Built on Drupal 11 with a clean, content-driven layout using Layout Builder.",
+    "tags": ["Drupal 11", "Sass", "jQuery", "Layout Builder"],
+    "image": { "src": "/psl.png", "alt": "Pollution Solution home page", "width": 1852, "height": 818 },
+    "liveUrl": "https://www.pollution-solution.net/"
+  },
+  {
+    "slug": "edupolicy",
+    "name": "EduPolicy.ai",
+    "category": "drupal",
+    "featured": true,
+    "summary": "A consultancy helping colleges and universities develop responsible AI policies and governance frameworks. Developed on Drupal 11 using Layout Builder for flexible, structured content management.",
+    "tags": ["Drupal 11", "Sass", "jQuery", "Layout Builder"],
+    "image": { "src": "/edp.png", "alt": "EduPolicy.ai home page", "width": 1851, "height": 689 },
+    "liveUrl": "https://edupolicysite.idlewilddigital.com/"
+  },
+  {
+    "slug": "casp",
+    "name": "CASP",
+    "category": "drupal",
+    "featured": true,
+    "summary": "An interdisciplinary research initiative studying complex living phenomena like cognition and development. Upgraded from Drupal 9 to Drupal 11 and fully redesigned with a refreshed layout.",
+    "tags": ["Drupal 11", "Sass", "jQuery", "Layout Builder"],
+    "image": { "src": "/casp.png", "alt": "CASP home page", "width": 2880, "height": 1346 },
+    "liveUrl": "https://www.biologicalpurpose.org/"
+  },
+  {
+    "slug": "smallslive",
+    "name": "SmallsLive",
+    "category": "django",
+    "featured": true,
+    "summary": "A live jazz streaming and archiving platform where fans can watch performances and explore a rich music library.",
+    "tags": ["Python", "Django", "Sass", "Bootstrap"],
+    "image": { "src": "/smalls.png", "alt": "SmallsLive home page", "width": 1366, "height": 620 },
+    "liveUrl": "https://smallslive.com/"
+  },
+  {
+    "slug": "redux-commerce",
+    "name": "Redux Commerce",
+    "category": "webapp",
+    "featured": false,
+    "summary": "A fully functional e-commerce application with cart management, product filtering, and global state handled via Redux Toolkit.",
+    "tags": ["React", "React Router", "React Bootstrap", "Redux Toolkit", "Toastify", "Sass"],
+    "image": { "src": "/web1.png", "alt": "Redux Commerce product listing", "width": 1287, "height": 636 },
+    "liveUrl": "https://rtk-commerce.netlify.app/",
+    "sourceUrl": "https://github.com/sudipto68/redux-toolkit-ecommerce-pratice"
+  },
+  {
+    "slug": "midwest-kidney-network",
+    "name": "Midwest Kidney Network",
+    "category": "drupal",
+    "featured": false,
+    "summary": "A healthcare network website built to connect kidney patients and professionals with resources and support.",
+    "tags": ["Backdrop CMS", "Sass", "jQuery", "Bootstrap"],
+    "image": { "src": "/mkn.png", "alt": "Midwest Kidney Network home page", "width": 2880, "height": 1346 },
+    "liveUrl": "https://www.midwestkidneynetwork.org"
+  },
+  {
+    "slug": "dear-teacher",
+    "name": "Dear Teacher",
+    "category": "drupal",
+    "featured": false,
+    "summary": "An educational platform offering expert guidance and tools to help children succeed in school, from preschool through college. Upgraded from Drupal 9 to Drupal 11 and fully redesigned.",
+    "tags": ["Drupal 11", "Sass", "jQuery", "Bootstrap"],
+    "image": { "src": "/dt.png", "alt": "Dear Teacher home page", "width": 2880, "height": 1346 },
+    "liveUrl": "https://www.dearteacher.com"
+  },
+  {
+    "slug": "logic-layer-solutions",
+    "name": "Logic Layer Solutions",
+    "category": "webapp",
+    "featured": false,
+    "summary": "A corporate website for a software solutions company, featuring animated sections and a clean, professional design.",
+    "tags": ["Next.js 16", "Tailwind CSS", "Framer Motion"],
+    "image": { "src": "/lls.png", "alt": "Logic Layer Solutions home page", "width": 2880, "height": 1346 },
+    "liveUrl": "https://logiclayersolution.vercel.app"
+  },
+  {
+    "slug": "jazz-cultural",
+    "name": "Jazz Cultural",
+    "category": "webapp",
+    "featured": false,
+    "summary": "A music room and café on Restaurant Row in Times Square, NYC, and a tribute to Barry Harris and his Jazz Cultural Theater. Partner site of SmallsLive.",
+    "tags": ["Vue.js", "Tailwind CSS", "Framer Motion", "Axios"],
+    "image": { "src": "/jazz.png", "alt": "Jazz Cultural home page", "width": 2880, "height": 1346 },
+    "liveUrl": "https://www.jazzcultural.com/"
+  },
+  {
+    "slug": "interrior",
+    "name": "Interrior",
+    "category": "webapp",
+    "featured": false,
+    "summary": "An interior design marketplace where users can browse services, connect with designers, and manage bookings.",
+    "tags": ["React", "React Router", "React Bootstrap", "Express", "MongoDB", "Firebase"],
+    "image": { "src": "/web2.png", "alt": "Interrior marketplace home page", "width": 1287, "height": 636 },
+    "liveUrl": "https://interrior-366e5.web.app/",
+    "sourceUrl": "https://github.com/sudipto68/Interrior-client"
+  },
+  {
+    "slug": "glozzom",
+    "name": "Glozzom",
+    "category": "ui",
+    "featured": false,
+    "summary": "A responsive multi-section landing page with smooth animations and a modern visual design.",
+    "tags": ["HTML", "Sass", "Bootstrap"],
+    "image": { "src": "/gloz.png", "alt": "Glozzom landing page", "width": 1350, "height": 659 },
+    "liveUrl": "https://sudipto68.github.io/Glozzom/",
+    "sourceUrl": "https://github.com/sudipto68/Glozzom"
+  },
+  {
+    "slug": "nike-clone",
+    "name": "Nike Clone",
+    "category": "ui",
+    "featured": false,
+    "summary": "A pixel-perfect responsive clone of the Nike e-commerce storefront, built as a front-end practice project.",
+    "tags": ["HTML", "CSS", "Bootstrap"],
+    "image": { "src": "/web4.png", "alt": "Nike storefront clone", "width": 1348, "height": 624 },
+    "liveUrl": "https://sudipto68.github.io/Responsive-Ecommerce-Web/",
+    "sourceUrl": "https://github.com/sudipto68/Responsive-Ecommerce-Web"
+  },
+  {
+    "slug": "fmr",
+    "name": "FMR",
+    "category": "drupal",
+    "featured": false,
+    "summary": "A conservation nonprofit website built on Backdrop CMS, focused on accessibility and content-driven storytelling.",
+    "tags": ["Backdrop CMS", "Sass", "jQuery"],
+    "image": { "src": "/fmr.png", "alt": "FMR home page", "width": 1287, "height": 636 },
+    "liveUrl": "https://fmr.org/"
+  }
+]

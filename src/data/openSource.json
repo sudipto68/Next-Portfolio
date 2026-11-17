@@ -1,0 +1,30 @@
+[
+  {
+    "name": "BackstopJS Generator",
+    "role": "Maintainer",
+    "meta": "1.x-1.0.0-beta01 · released Apr 2026",
+    "href": "https://backdropcms.org/project/backstop_generator",
+    "text": "Builds BackstopJS config from the Backdrop admin, so you can run visual regression tests without hand-writing backstop.json. Written from scratch for Backdrop."
+  },
+  {
+    "name": "Domain Path",
+    "role": "Co-maintainer",
+    "meta": "1.x-1.0.0-beta01 · released Nov 2024",
+    "href": "https://backdropcms.org/project/domain_path",
+    "text": "Separate path aliases per domain, for sites running the Domain Access module."
+  },
+  {
+    "name": "Backdrop forum",
+    "role": "Member",
+    "meta": "forum.backdropcms.org",
+    "href": "https://forum.backdropcms.org",
+    "text": "Where I ask and answer questions about building with Backdrop."
+  },
+  {
+    "name": "Everything else",
+    "role": "GitHub",
+    "meta": "github.com/sudipto68 · 80 repositories",
+    "href": "https://github.com/sudipto68",
+    "text": "From Flutter experiments in 2020 to Backdrop modules today."
+  }
+]
