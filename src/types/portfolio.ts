@@ -75,6 +75,7 @@ export interface CodeCard {
 export interface Seo {
   title: string
   description: string
+  projectsDescription: string
 }
 
 export interface Profile {

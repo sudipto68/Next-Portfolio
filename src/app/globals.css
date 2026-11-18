@@ -127,6 +127,7 @@ html:not(.js) .w { transform: none; }
 .center { text-align: center; }
 .center .lead { margin-inline: auto; }
 .section { padding: clamp(4.5rem, 10vw, 8rem) 0; }
+@media (max-width: 640px) { .section { padding: 3.25rem 0; } }
 
 .js [data-rise] { opacity: 0; transform: translateY(36px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0ms); }
 .js [data-rise].in { opacity: 1; transform: none; }

@@ -4,6 +4,7 @@ import { NAV_LINKS } from '@/constants/site'
 import NavShell from './NavShell'
 import NavLinks from './NavLinks'
 import ThemeToggle from './ThemeToggle'
+import MobileMenu from './MobileMenu'
 import styles from './Nav.module.css'
 
 export default function Nav({ profile }: { profile: Profile }) {
@@ -21,10 +22,11 @@ export default function Nav({ profile }: { profile: Profile }) {
         </Link>
         <NavLinks links={NAV_LINKS} className={styles.links} />
         <div className={styles.right}>
-          <Link className="btn btn-lime sm" href="/#contact">
+          <Link className={`btn btn-lime sm ${styles.cta}`} href="/#contact">
             {profile.copy.navCta}
           </Link>
           <ThemeToggle />
+          <MobileMenu links={NAV_LINKS} cta={profile.copy.navCta} />
         </div>
       </nav>
     </NavShell>

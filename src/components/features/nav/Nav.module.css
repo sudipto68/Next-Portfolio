@@ -5,7 +5,7 @@
 }
 .hide { transform: translateY(-130%); }
 .nav {
-  pointer-events: auto; width: min(1120px, 100%); margin-inline: auto; height: var(--nav-h); padding: 0 .8rem 0 1rem;
+  position: relative; pointer-events: auto; width: min(1120px, 100%); margin-inline: auto; height: var(--nav-h); padding: 0 .8rem 0 1rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   background: color-mix(in srgb, var(--bg) 62%, transparent); border: 1px solid var(--glass-edge); border-radius: 99px;
   -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4); box-shadow: var(--shadow);
@@ -22,6 +22,26 @@
 .iconBtn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--glass-edge); color: var(--ink); cursor: pointer; transition: background .25s, color .25s, transform .4s; }
 .iconBtn:hover { background: var(--ink); color: var(--bg); transform: rotate(180deg); }
 .iconBtn svg { width: 18px; height: 18px; }
-@media (max-width: 1020px) { .links { display: none; } }
-@media (max-width: 520px) { .brandText small { display: none; } .right :global(.btn.sm) { padding: .55rem .9rem; } }
-@media (prefers-reduced-motion: reduce) { .wrap { transition: none; } }
+
+.menuBtn, .panel { display: none; }
+.menuBtn:hover { transform: none; }
+.panel {
+  position: absolute; top: calc(100% + 10px); left: 0; right: 0; flex-direction: column; gap: 1.1rem; padding: .8rem 1.2rem 1.2rem;
+  border-radius: 28px; border: 1px solid var(--glass-edge); box-shadow: var(--shadow);
+  /* solid fill: a backdrop-filter nested inside the blurred nav can't see the page behind it */
+  background: color-mix(in srgb, var(--bg) 97%, var(--ink));
+  opacity: 0; visibility: hidden; transform: translateY(-8px) scale(.98); transform-origin: top right;
+  transition: opacity .3s var(--ease), transform .4s var(--ease), visibility 0s .4s;
+}
+.panel[data-open="true"] { opacity: 1; visibility: visible; transform: none; transition: opacity .3s var(--ease), transform .4s var(--ease); }
+.panelLinks { display: grid; }
+.panelLinks a {
+  padding: .7rem .2rem; border-bottom: 1px solid var(--line); text-decoration: none;
+  font-family: var(--font-display); font-weight: 500; font-size: 1.12rem; letter-spacing: -.02em; line-height: 1.25;
+}
+.panelLinks a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.panel :global(.btn) { justify-content: center; }
+
+@media (max-width: 1020px) { .links { display: none; } .menuBtn { display: grid; } .panel { display: flex; } }
+@media (max-width: 520px) { .brandText small, .right .cta { display: none; } .nav { padding: 0 .6rem 0 .7rem; } .right { gap: .45rem; } }
+@media (prefers-reduced-motion: reduce) { .wrap, .panel, .panel[data-open="true"] { transition: none; } }

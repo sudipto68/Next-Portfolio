@@ -22,7 +22,7 @@
   "code": {
     "frontend": ["React", "Next.js", "Vue"],
     "backend": ["Django", "FastAPI"],
-    "cms": ["Drupal", "Backdrop"],
+    "cms": ["Drupal", "Backdrop", "Payload"],
     "maintains": ["backstop_generator", "domain_path"]
   },
   "tech": [
@@ -59,7 +59,7 @@
   "copy": {
     "navCta": "Say hello",
     "heroChip": "Idlewild Digital · Dhaka, Bangladesh",
-    "heroLede": "I’m a senior software engineer. For five years I’ve built **Drupal** sites and the **React, Next.js and Vue** front ends that sit on top of them. On the side, I maintain modules for **Backdrop CMS**.",
+    "heroLede": "I’m a senior software engineer. For five years I’ve built **Drupal** sites and the **React, Next.js and Vue** front ends that sit on top of them. Lately I’ve been building with **Payload CMS**.",
     "heroPrimary": "See what I’ve built",
     "heroSecondary": "Experience",
     "stickerHint": "the stickers drag",
@@ -87,6 +87,7 @@
   },
   "seo": {
     "title": "Sudipto Kumar Mitra · Senior Software Engineer",
-    "description": "Sudipto Kumar Mitra is a senior software engineer at Idlewild Digital in Dhaka, working with Drupal, React, Next.js, Vue.js and Django, and a maintainer of Backdrop CMS modules."
+    "description": "Senior software engineer in Dhaka. I build Drupal sites, Next.js, React and Vue front ends, Django and FastAPI back ends, and Payload CMS admin panels.",
+    "projectsDescription": "Client sites and apps by Sudipto Kumar Mitra: Drupal and Backdrop builds, Next.js and Payload CMS platforms, and Vue and Django web apps."
   }
 }

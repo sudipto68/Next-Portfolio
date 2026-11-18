@@ -16,3 +16,4 @@
 .card:hover .shape { transform: scale(1.07) translateY(-4px) rotate(-1.5deg); }
 .shape svg { width: 100%; height: 100%; }
 @media (max-width: 980px) { .split { grid-template-columns: 1fr; } .tri { grid-template-columns: 1fr; } .card { min-height: 380px; } }
+@media (max-width: 640px) { .tri { gap: .9rem; } .card { min-height: 330px; padding: 1.4rem; border-radius: 24px; } .shape { height: 42%; } .card:hover, .card:hover .shape { transform: none; } }

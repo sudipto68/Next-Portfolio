@@ -19,7 +19,13 @@ export default function StackedCards({ className, children }: StackedCardsProps)
     if (reduce || !ref.current) return
     const cards = Array.from(ref.current.querySelectorAll<HTMLElement>('[data-card]'))
     cards.slice(0, -1).forEach((card, i) => {
-      const top = parseFloat(getComputedStyle(card).top) || 0
+      const style = getComputedStyle(card)
+      if (style.position !== 'sticky') {
+        card.style.transform = ''
+        card.style.setProperty('--dim', '0')
+        return
+      }
+      const top = parseFloat(style.top) || 0
       const dist = cards[i + 1].getBoundingClientRect().top - top
       const p = clamp(1 - dist / card.offsetHeight, 0, 1)
       card.style.transform = `scale(${(1 - p * 0.06).toFixed(4)})`

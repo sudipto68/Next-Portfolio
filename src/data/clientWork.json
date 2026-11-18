@@ -1,5 +1,15 @@
 [
   {
+    "slug": "govara",
+    "name": "Govara",
+    "category": "webapp",
+    "featured": true,
+    "summary": "An AI governance verification platform. Companies run their AI, privacy and security compliance in one workspace, and a credentialed human auditor verifies it against frameworks like ISO/IEC 42001 and the EU AI Act. I’ve worked on it since the early stages, and most recently added a Payload CMS admin panel and wire transfer payments alongside the existing Stripe checkout.",
+    "tags": ["Next.js", "Django DRF", "PostgreSQL", "Docker", "Payload CMS", "Stripe"],
+    "image": { "src": "/govara.png", "alt": "Govara home page", "width": 2880, "height": 1346 },
+    "liveUrl": "https://www.govara.io/"
+  },
+  {
     "slug": "scholarstone",
     "name": "ScholarStone Academy",
     "category": "webapp",
