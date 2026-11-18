@@ -50,4 +50,13 @@
 .image { padding: 0; overflow: hidden; background: #fff; }
 .image img { object-fit: cover; object-position: left top; }
 
-@media (max-width: 760px) { .card { height: auto; min-height: 560px; } .mock { width: 78%; height: 36%; } .card h3 { max-width: none; } }
+/* phones: cards flow normally (sticky stacking hid the links on short screens) and the mock sits under the text */
+@media (max-width: 760px) {
+  .card { --pad: 1.4rem; position: relative; top: auto; height: auto; min-height: 0; margin-bottom: 1.2rem; padding: var(--pad) var(--pad) 0; border-radius: 28px; justify-content: flex-start; }
+  .card h3 { max-width: none; font-size: clamp(2rem, 9.5vw, 2.6rem); }
+  .card p { font-size: 1rem; }
+  .meta { grid-template-columns: 1fr 1fr; gap: .8rem 1rem; margin-top: 1.4rem; }
+  .meta > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .mock { position: relative; align-self: flex-end; width: 88%; height: 210px; margin: 1.6rem calc(var(--pad) * -1) 0 0; }
+  .card:hover .mock { transform: none; }
+}

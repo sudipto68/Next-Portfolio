@@ -21,5 +21,6 @@
 :global(html:not(.js)) .g { transform: none; opacity: 1; }
 .legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 2rem; padding: 1rem 0 1.2rem; font-size: .85rem; opacity: .78; }
 .legal button { background: none; border: 0; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; padding: 0; color: inherit; }
+@media (max-width: 640px) { .cta { padding: 3.5rem 0 3rem; } .row { margin-top: 1.6rem; } }
 @media (max-width: 860px) { .panelTop { grid-template-columns: 1fr 1fr; } .panel h2 { grid-column: 1 / -1; max-width: none; } }
 @media (prefers-reduced-motion: reduce) { .g { transform: none; opacity: 1; transition: none; } }

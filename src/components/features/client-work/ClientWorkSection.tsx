@@ -19,7 +19,7 @@ export default function ClientWorkSection({ profile, items }: ClientWorkSectionP
         <p className="lead" data-rise="">
           {copy.clientIntro}
         </p>
-        <ClientWorkGrid items={items} />
+        <ClientWorkGrid items={items} rail />
         <div className={styles.more}>
           <Link className="btn btn-dark" href="/projects">
             {copy.clientButton} <ArrowIcon />
